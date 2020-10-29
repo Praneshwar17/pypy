@@ -5,16 +5,16 @@ import re
 import sys
 
 # Complete the appendAndDelete function below.
-def appendAndDelete(s, t, k):
+def appendAndDelete(p, t, k):
     c=0
-    l = len(s)
-    while s[:l]!=t[:l]:
-        l-=1
+    length = len(s)
+    while p[:l]!=t[:l]:
+        length-=1
         c+=1
     o = ((len(t)-l)+c)
     if k<o:
         return "No"
-    elif (len(s)+len(t))<=k:
+    elif (len(p)+len(t))<=k:
         return "Yes"
     elif 2*len(t)<k:
         return "Yes"
